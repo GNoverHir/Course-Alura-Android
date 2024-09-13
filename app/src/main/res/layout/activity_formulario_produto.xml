@@ -14,7 +14,7 @@
         tools:context=".ui.activity.FormularioProdutoActivity">
 
         <EditText
-            android:id="@+id/nomeEditText"
+            android:id="@+id/activitiy_formulario_produto_nome"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="nome"
@@ -24,32 +24,32 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <EditText
-            android:id="@+id/descricaoEditText"
+            android:id="@+id/activitiy_formulario_produto_desc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="descricao"
-            app:layout_constraintEnd_toEndOf="@id/nomeEditText"
-            app:layout_constraintStart_toStartOf="@id/nomeEditText"
-            app:layout_constraintTop_toBottomOf="@id/nomeEditText"/>
+            app:layout_constraintEnd_toEndOf="@id/activitiy_formulario_produto_nome"
+            app:layout_constraintStart_toStartOf="@id/activitiy_formulario_produto_nome"
+            app:layout_constraintTop_toBottomOf="@id/activitiy_formulario_produto_nome"/>
 
         <EditText
-            android:id="@+id/valorEditText"
+            android:id="@+id/activitiy_formulario_produto_valor"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="valor"
             android:inputType="numberDecimal"
-            app:layout_constraintEnd_toEndOf="@id/nomeEditText"
-            app:layout_constraintStart_toStartOf="@id/nomeEditText"
-            app:layout_constraintTop_toBottomOf="@id/descricaoEditText"/>
+            app:layout_constraintEnd_toEndOf="@id/activitiy_formulario_produto_nome"
+            app:layout_constraintStart_toStartOf="@id/activitiy_formulario_produto_nome"
+            app:layout_constraintTop_toBottomOf="@id/activitiy_formulario_produto_desc"/>
 
         <Button
-            android:id="@+id/saveButton"
+            android:id="@+id/activitiy_formulario_produto_saveButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/valorEditText"
+            app:layout_constraintTop_toBottomOf="@+id/activitiy_formulario_produto_valor"
             app:layout_constraintVertical_bias="1"
             android:layout_margin="16dp"
             android:text="Salvar"/>
