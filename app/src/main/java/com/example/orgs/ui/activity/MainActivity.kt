@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.orgs.R
+import com.example.orgs.dao.ProdutosDAO
 import com.example.orgs.model.Produtos
 import com.example.orgs.ui.recyclerview.adapter.ListaProdutosAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -29,23 +30,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main){
 //        val valor = findViewById<TextView>(R.id.valor)
 //        valor.text = "9,99"
 
-        val recyclerView = findViewById<RecyclerView>(R.id.reciclerView)
-        recyclerView.adapter = ListaProdutosAdapter(context = this, produtos = listOf(
-                Produtos(nome = "Cesta de frutas",
-                        descricao = "Laranja e maçã",
-                        valor = BigDecimal("19.99")
-                ),
-                Produtos(nome = "Carros",
-                        descricao = "Hyundai e Peugeot",
-                        valor = BigDecimal("60.000")
-                ),
-                Produtos(nome = "Cachorros",
-                        descricao = "Poodle e Golden",
-                        valor = BigDecimal("10.000")
-                )
 
-            )
-        )
+        val dao = ProdutosDAO()
+        val recyclerView = findViewById<RecyclerView>(R.id.reciclerView)
+        recyclerView.adapter = ListaProdutosAdapter(context = this, produtos = dao.buscarTodos())
 
         val fab = findViewById<FloatingActionButton>(R.id.floatingActionButton)
         fab.setOnClickListener {
